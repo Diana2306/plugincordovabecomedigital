@@ -1,0 +1,23 @@
+{
+  "name": "com.become.digital.iv",
+  "version": "0.0.1",
+  "description": "SDK verificación",
+  "cordova": {
+    "id": "com.become.digital.iv",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Becomedigital"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "nelson pena",
+  "license": "ISC"
+}

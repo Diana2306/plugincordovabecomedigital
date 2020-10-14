@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.become.digital.iv" version="1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>plugin_iv_become_digital</name>
+    <js-module name="plugin_iv_become_digital" src="www/plugin_iv_become_digital.js">
+        <clobbers target="cordova.plugins.plugin_iv_become_digital" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="plugin_iv_become_digital">
+                <param name="android-package" value="com.become.digital.iv.plugin_iv_become_digital" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/plugin_iv_become_digital.java" target-dir="src/com/become/digital/iv/plugin_iv_become_digital" />
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.becomedigital.sdk.identity.becomedigitalsdk.StartActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            </activity>
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="plugin_iv_become_digital">
+                <param name="ios-package" value="plugin_iv_become_digital" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/plugin_iv_become_digital.swift" />
+    </platform>
+</plugin>
