@@ -47,7 +47,7 @@ import static androidx.navigation.Navigation.findNavController;
  */
 public class plugin_iv_become_digital extends CordovaPlugin {
     private BecomeCallBackManager mCallbackManager = BecomeCallBackManager.createNew();
-    public static final String INIT = "init";
+    public static final String INIT = "initBecome";
     public static final String COOL_METHOD = "coolMethod";
     public static final String CANCEL = "Cancel";
     public static final String SET_BECOME_CALLBACK = "setBecomeCallback";
@@ -62,7 +62,7 @@ public class plugin_iv_become_digital extends CordovaPlugin {
             }
             case INIT: {
                 JSONObject data = args.getJSONObject(0);
-                this.init(data, callbackContext);
+                this.initBecome(data, callbackContext);
                 return true;
             }
             case SET_BECOME_CALLBACK: {
@@ -81,7 +81,7 @@ public class plugin_iv_become_digital extends CordovaPlugin {
         }
     }
 
-    private void init(final JSONObject data, CallbackContext callbackContext) {
+    private void initBecome(final JSONObject data, CallbackContext callbackContext) {
         cordova.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
